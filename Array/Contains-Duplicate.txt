@@ -1,0 +1,30 @@
+Problem:
+
+Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+Example 1:
+
+Input: nums = [1,2,3,1]
+Output: true
+
+Example 2:
+
+Input: nums = [1,2,3,4]
+Output: false
+
+Solution:
+
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        std::set<int> x(nums.begin(),nums.end());
+        if (x.size()==nums.size())
+            return false;
+        else
+            return true;
+    }
+};
+
+Explanation:
+Set is a data structure that has no duplicates. So if the vector has any duplicates then they will be automatically removed in sets. Which will result in a size mismatch between both and thus the result.
+
