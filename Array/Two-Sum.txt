@@ -1,0 +1,8 @@
+target = 0
+for i,j in enumerate(val):
+    hash = {}
+    x = target - j
+    if x in hash:
+        return [hash[x],i]
+    else:
+        hash[x] = i
